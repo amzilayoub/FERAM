@@ -76,3 +76,18 @@ $(document).ready(() => {
         $('.contact').css('left', '-100%').css('opacity', '0');
     });
 });
+
+/*
+** START Loading section
+*/
+$(window).on('load', function () {
+    'use strict';
+    $('.parentLoading .lds-ring').fadeOut(2000, function () {
+    	$('.parentLoading').fadeOut(2000, function () {
+    		$('body').css('overflow', 'visible');
+    	});
+        setTimeout(function () {
+        	$('.loading').remove();
+        }, 1000);
+    });
+});
